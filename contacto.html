@@ -7,6 +7,18 @@
     <title>Home FUAS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="style.css" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#formulario").validate();
+        });
+
+
+    </script>
+
+
 </head>
 <body>
     <div class="container-fluid text-center ">
@@ -27,9 +39,59 @@
                 <div class = "row">
                     <div class = "text-lg-start">
                         <nav>
-                            <p id="letranav"> <a href="home.html">Inicio </a> | <a href="formulario.html">Formulario</a></p>
+                            <p id="letranav"> <a href="home.html">Inicio </a> | <a href="formulario.html">Formulario</a> | <a href="contacto.html">Contacto </a></p>
 
                         </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="cabeza">
+                <div class="row">
+                    <div class= "col-4"> 
+                    
+                    </div> 
+                    <div class="col-sm text-lg-start">
+                        <form id="formulario" action="" method="post">
+                            <h1 id="tituloform">Contacto</h1>
+                            <p>
+                            <label for="name">Nombre Completo<span> (Obligatorio)</span> </label>
+                            <input id="name" name="name" minlength="10" type="text" required>
+                            </p>
+
+                            <p>
+                            <label for="email">E-mail<span> (Obligatorio)</span> </label>
+                            <input id="email" name="email" type="email" required>
+                            </p>
+
+                            <p>
+                            <label for="comentarios">Comentarios<span> (Obligatorio)</span> </label>
+                            <input id="comentarios" name="comentarios" type="text" minlength="20" required>
+                            </p>
+
+                            <p>
+                            <input type="reset" value="LIMPIAR">
+                            <input class="submit" type="submit" value="ENVIAR">
+                            </p>
+
+                        </form>
+                    </div>  
+                </div>
+                <div class="row">
+                    <p> <img src="FUAS.png" alt="" width="700px">      </p>
+                </div>
+
+            </div>
+            <div id="contacto">
+                    <div class = "row">
+                        <h1 id ="parrafos">Ministerio de Educación - Teléfono: +5624066000
+                        Av. Libertador Bernardo O’higgins 137   </h1>
+                    </div>
+
+                </div>
+            <div id="creditos">
+                <div class="row">
+                    <div class="text-lg-start">
+                        <p >Sitio Desarrollado por Alumnos de DUOC.</p>
                     </div>
                 </div>
             </div>
