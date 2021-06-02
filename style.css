@@ -53,3 +53,8 @@ li{
 #contacto{
     background-color: rgb(50, 72, 197);
 }
+
+#indicacion{
+    color: rgb(199, 47, 191);
+    font-size: 25px;
+}
