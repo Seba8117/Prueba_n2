@@ -1,3 +1,5 @@
 Sebastián Riquelme
 seccion:007D
 link repositorio:https://github.com/Seba8117/Prueba_n2
+IMPORTANTE!! Para el formulario puse todos los campos obligatorios como lo decía en la prueba, 
+siento que algunos campos no eran obligatorios, pero quise seguir lo que se decía en la prueba.
