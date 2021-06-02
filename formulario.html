@@ -6,17 +6,417 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home FUAS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" >
-    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#formulario").validate();
+        });
+
+
+    </script>
 </head>
 <body>
+    <div class="container-fluid text-center ">
+        <div class="row">
+            <div id="inicio">
+                <div class="row">
+                    <div class="col-5 text-white  text-lg-start ">
+                        <h1><img src="logo-gobierno.jpg" alt="" width="150px">  </h1> 
+
+                    </div>
+                    <div class="col-7 text-lg-start ">
+                     <h1> <img src="fuas-2021.jpg" alt="" width="270px"> </h1>
+                    </div>
+                </div>
+            
+            </div>
+            <div id="nav">
+                <div class = "row">
+                    <div class = "text-lg-start">
+                        <nav>
+                            <p id="letranav"> <a href="home.html">Inicio </a> | <a href="contacto.html">Contáctanos</a></p>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="cabeza">
+                <div class = "row">
+                    <div class="col-2">
+                        <h1> </h1>
+                    </div>
+                    <div class="col-sm text-start">
+                        <form id="formulario" action="" method="post">
+                            <h1 id="tituloform">Formulario</h1>
+                            <p>
+                                <label for="name">Nombre Completo<span> (Obligatorio)</span> </label>
+                                <input id="name" name="name" minlength="1" type="text" required>
+
+                            </p>
+                            <p>
+                                <label for="rut">Rut<span> (Solo con guion)</span> </label>
+                                <input id="rut" name="rut" minlength="9" required>
+
+                            </p>
+                            <h1 id="tituloform">Datos del alumno: </h1>
+                            <p>
+                                <label for="estado_civil">Estado civil<span> (Obligatorio)</span> </label>
+                                <input id="estado_civil" name="estado_civil" minlength="5" type="text" required>
+                            </p>
+                            <p> Nacionalidad:
+                            </p>
+                            <p>
+                                <label><input type="checkbox" id="cbox1" value="1_checkbox"> Chilena<br>
+                                <input type="checkbox" id="cbox2" value="2_checkbox"> <label for="cbox2">Extranjera con permanencia definitiva</label><br>
+                                <input type="checkbox" id="cbox3" value="3_checkbox"> <label for="cbox2">Extranjera con residencia</label>
+                            </p>
+                            
+                            <p>
+                                <label for="actividad">Actividad:<span> (Obligatorio)</span> </label>
+                                <input id="actividad" name="actividad" minlength="5" type="text" required>
+
+                            </p>
+                            <p> ¿Cursaste los 3 ultimos años de enseñanza escolar en el extranjero?
+                            </p> 
+                            <p>
+                                <label><input type="checkbox" id="ense_escol_1" value="ense_escol_1"> SI
+                                <input type="checkbox" id="ense_escol_2" value="ense_escol_2"> <label for="cbox2">No</label>
+                            </p>
+                            <h1 id="tituloform">Antecedentes academicos: </h1>
+                            <p>
+                                <label for="not_enseñanza_m">Promedio de notas eseñanza media:<span> (Obligatorio)</span> </label>
+                                <input id="not_enseñanza_m" name="not_enseñanza_m" minlength="2" type="number" required>
+
+                            </p>
+                            <p>
+                                <label for="edu_sup">Institucion de educacion superior donde te encuentras estudiando:<span> (Obligatorio)</span> </label>
+                                <input id="edu_sup" name="edu_sup" minlength="6" type="text" required>
+
+                            </p>
+
+                            <p>
+                                <label for="ult_ano">ultimo año de matricula en institución superior:<span> (Obligatorio)</span> </label>
+                                <input id="ult_ano" name="ult_ano" minlength="4" type="number" required>
+
+                            </p>
+                            <h1 id="tituloform">Integrantes grupo familiar: </h1>
+                                <h2 id="subtitulo"> Persona numero 1:
+                                </h2>
+                                
+                                <p>
+                                <label for="name1">Nombre Completo<span> </span> </label>
+                                <input id="name1" name="name1" minlength="3" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="ap1">Apellido paterno:<span> </span> </label>
+                                <input id="ap1" name="ap1" minlength="3" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="am1">Apellido materno:<span> </span> </label>
+                                <input id="am1" name="am1" minlength="3" type="text" >
+                                </p>
+
+                                <p>
+                                <label for="rut1">Rut:<span> </span> </label>
+                                <input id="rut1" name="rut1" minlength="9" >
+                                </p>
+
+                                <p>
+                                <label for="edad1">Edad:<span> </span> </label>
+                                <input id="edad1" name="edad1" minlength="1" type="number" >
+                                </p>
+
+                                <p>
+                                <label for="estado_civil1">Estado civil:<span> </span> </label>
+                                <input id="estado_civil1" name="estado_civil1" minlength="5" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="Parentezco1">Parentezco:<span> </span> </label>
+                                <input id="Parentezco1" name="Parentezco1" minlength="5" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="prevision1">Previsión:<span> </span> </label>
+                                <input id="prevision1" name="prevision1" minlength="5" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="previsionsalud1">Previsión salud:<span> </span> </label>
+                                <input id="previsionsalud1" name="previsionsalud1" minlength="5" type="text" >
+                                </p>
+
+                                <p>
+                                <label for="actividad1">Actividad:<span> </span> </label>
+                                <input id="actividad1" name="actividad1" minlength="5" type="text" >
+                                </p>
+
+                                <p>
+                                <label for="n_estudios1">Nivel de estudios:<span> </span> </label>
+                                <input id="n_estudios1" name="n_estudios1" minlength="4" type="text" >
+                                </p>
+
+                                
+
+
+                                <h2 id="subtitulo"> Persona numero 2:
+                                </h2>
+                                
+                                <p>
+                                <label for="name2">Nombre Completo<span> </span> </label>
+                                <input id="name2" name="name2" minlength="3" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="ap2">Apellido paterno:<span> </span> </label>
+                                <input id="ap2" name="ap2" minlength="3" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="am2">Apellido materno:<span> </span> </label>
+                                <input id="am2" name="am2" minlength="3" type="text" >
+                                </p>
+
+                                <p>
+                                <label for="rut2">Rut:<span> </span> </label>
+                                <input id="rut2" name="rut2" minlength="9" >
+                                </p>
+
+                                <p>
+                                <label for="edad2">Edad:<span> </span> </label>
+                                <input id="edad2" name="edad2" minlength="1" type="number" >
+                                </p>
+
+                                <p>
+                                <label for="estado_civil2">Estado civil:<span> </span> </label>
+                                <input id="estado_civil2" name="estado_civil2" minlength="5" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="Parentezco2">Parentezco:<span> </span> </label>
+                                <input id="Parentezco2" name="Parentezco2" minlength="5" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="prevision2">Previsión:<span> </span> </label>
+                                <input id="prevision2" name="prevision2" minlength="5" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="previsionsalud2">Previsión salud:<span> </span> </label>
+                                <input id="previsionsalud2" name="previsionsalud2" minlength="5" type="text" >
+                                </p>
+
+                                <p>
+                                <label for="actividad2">Actividad:<span> </span> </label>
+                                <input id="actividad2" name="actividad2" minlength="5" type="text" >
+                                </p>
+
+                                <p>
+                                <label for="n_estudios2">Nivel de estudios:<span> </span> </label>
+                                <input id="n_estudios2" name="n_estudios2" minlength="4" type="text" >
+                                </p>
+
+                                <h2 id="subtitulo"> Persona numero 3:
+                                </h2>
+                                
+                                <p>
+                                <label for="name3">Nombre Completo<span> </span> </label>
+                                <input id="name3" name="name3" minlength="3" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="ap3">Apellido paterno:<span> </span> </label>
+                                <input id="ap3" name="ap3" minlength="3" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="am3">Apellido materno:<span> </span> </label>
+                                <input id="am3" name="am3" minlength="3" type="text" >
+                                </p>
+
+                                <p>
+                                <label for="rut3">Rut:<span> </span> </label>
+                                <input id="rut3" name="rut3" minlength="9" >
+                                </p>
+
+                                <p>
+                                <label for="edad3">Edad:<span> </span> </label>
+                                <input id="edad3" name="edad3" minlength="1" type="number" >
+                                </p>
+
+                                <p>
+                                <label for="estado_civil3">Estado civil:<span> </span> </label>
+                                <input id="estado_civil3" name="estado_civil3" minlength="5" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="Parentezco3">Parentezco:<span> </span> </label>
+                                <input id="Parentezco3" name="Parentezco3" minlength="5" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="prevision3">Previsión:<span> </span> </label>
+                                <input id="prevision3" name="prevision3" minlength="5" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="previsionsalud3">Previsión salud:<span> </span> </label>
+                                <input id="previsionsalud3" name="previsionsalud3" minlength="5" type="text" >
+                                </p>
+
+                                <p>
+                                <label for="actividad3">Actividad:<span> </span> </label>
+                                <input id="actividad3" name="actividad3" minlength="5" type="text" >
+                                </p>
+
+                                <p>
+                                <label for="n_estudios3">Nivel de estudios:<span> </span> </label>
+                                <input id="n_estudios3" name="n_estudios3" minlength="4" type="text" >
+                                </p>
+                             
+
+                                <h2 id="subtitulo"> Persona numero 4:
+                                </h2>
+                                
+                                <p>
+                                <label for="name4">Nombre Completo<span> </span> </label>
+                                <input id="name4" name="name4" minlength="3" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="ap4">Apellido paterno:<span> </span> </label>
+                                <input id="ap4" name="ap4" minlength="3" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="am4">Apellido materno:<span> </span> </label>
+                                <input id="am4" name="am4" minlength="3" type="text" >
+                                </p>
+
+                                <p>
+                                <label for="rut4">Rut:<span> </span> </label>
+                                <input id="rut4" name="rut4" minlength="9" >
+                                </p>
+
+                                <p>
+                                <label for="edad4">Edad:<span> </span> </label>
+                                <input id="edad4" name="edad4" minlength="1" type="number" >
+                                </p>
+
+                                <p>
+                                <label for="estado_civil4">Estado civil:<span> </span> </label>
+                                <input id="estado_civil4" name="estado_civil4" minlength="5" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="Parentezco4">Parentezco:<span> </span> </label>
+                                <input id="Parentezco4" name="Parentezco4" minlength="5" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="prevision4">Previsión:<span> </span> </label>
+                                <input id="prevision4" name="prevision4" minlength="5" type="text" >
+                                </p>
+                                
+                                <p>
+                                <label for="previsionsalud4">Previsión salud:<span> </span> </label>
+                                <input id="previsionsalud4" name="previsionsalud4" minlength="5" type="text" >
+                                </p>
+
+                                <p>
+                                <label for="actividad4">Actividad:<span> </span> </label>
+                                <input id="actividad4" name="actividad4" minlength="5" type="text" >
+                                </p>
+
+                                <p>
+                                <label for="n_estudios4">Nivel de estudios:<span> </span> </label>
+                                <input id="n_estudios4" name="n_estudios4" minlength="4" type="text" >
+                                </p>
+
+                            <h1 id="tituloform">Dirección del grupo familiar: </h1>
+                            <p>
+                                <label for="direccion">Dirección:<span> (Obligatorio)</span> </label>
+                                <input id="direccion" name="direccion" minlength="4" type="text" required>
+
+                            </p>
+                            <p>
+                                <label for="n_casa">Numero:<span> (Obligatorio)</span> </label>
+                                <input id="n_casa" name="n_casa" minlength="3" type="number" required>
+
+                            </p>
+                            <p>
+                                <label for="n_depa">Departamento:<span> (Opcional)</span> </label>
+                                <input id="n_depa" name="n_depa" minlength="3" type="number" >
+
+                            </p>
+                            <p>
+                                <label for="poblacion">Poblacion/villa:<span> (Obligatorio)</span> </label>
+                                <input id="poblacion" name="poblacion" minlength="5" type="text" required >
+
+                            </p>
+                            <p>
+                                <label for="Region">Region:<span> (Obligatorio)</span> </label>
+                                <input id="Region" name="Region" minlength="5" type="text" required >
+
+                            </p>
+                            <p>
+                                <label for="Comuna">Comuna:<span> (Obligatorio)</span> </label>
+                                <input id="Comuna" name="Comuna" minlength="5" type="text" required>
+
+                            </p>
+                            <p>
+                                <label for="Ciudad">Ciudad:<span> (Obligatorio)</span> </label>
+                                <input id="Ciudad" name="Ciudad" minlength="5" type="text" required>
+
+                            </p>
+                            <h1 id="tituloform">Télefono: </h1>
+                            <p>
+                                <label for="codigo_area">Codigo de area:<span> (Obligatorio)</span> </label>
+                                <input id="codigo_area" name="codigo_area" minlength="4" type="number" required>
+
+                            </p>
+                            <p>
+                                <label for="n_telefono">Telefono:<span> (Obligatorio, anteponer 22)</span> </label>
+                                <input id="n_telefono" name="n_telefono" minlength="9" type="number" required>
+
+                            </p>
+                            <p>
+                                <label for="n_celular">Celular:<span> (Obligatorio, anteponer 9)</span> </label>
+                                <input id="n_celular" name="n_celular" minlength="9" type="number" required>
+
+                            </p>
+                            <p>
+                                <input type="reset" value="LIMPIAR">
+                                <input class="submit" type="submit" value="ENVIAR">
+                            </p>
+
+                        </form>
+                    </div>  
 
 
 
 
 
 
+                </div>
+            </div>
 
 
+
+        </div>
+
+
+
+
+
+
+    </div>
 
 </body>
 </html>

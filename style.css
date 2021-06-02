@@ -29,3 +29,13 @@ h1{
 li{
     color: aliceblue;
 }
+
+#tituloform{
+    color: slateblue ;
+    font-size: 30px;
+}
+
+#subtitulo{
+    color: slateblue ;
+    font-size: 25px;
+}
