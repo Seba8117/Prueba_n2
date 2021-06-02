@@ -4,13 +4,28 @@ img{
 
 
 #inicio{
-    background-color: blueviolet;
+    background-image: url("purple.jpg") ;
 }
 
 #nav{
     background-color: rgb(50, 72, 197);
 }
 
-#letranav{
+a{
+    text-decoration: none;
+    color: white ;
+    
+}
+#cabeza{
+    background-color: rgb(103, 121, 224);
+}
+
+p{
+    color: aliceblue;
+}
+h1{
+    color: aliceblue;
+}
+li{
     color: aliceblue;
 }
