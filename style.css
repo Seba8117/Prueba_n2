@@ -40,9 +40,14 @@ li{
     font-size: 25px;
 }
 #creditos{
-    background-color: rgb(50, 72, 197);
+    background-color: rgb(199, 47, 47);
 }
 
 #parrafos{
     font-size:30px ;
 }
+
+#api{
+    background-color: rgb(50, 72, 197);
+}
+
